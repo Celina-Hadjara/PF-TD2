@@ -5,6 +5,6 @@ package universite;
  * @author Célina Hadjara
  */
 @FunctionalInterface
-public interface ToString <T>{
-    String convertToString (T a);
+public interface ToString<T> {
+    String convertToString(T a);
 }

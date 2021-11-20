@@ -3,7 +3,6 @@ package universite;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.function.Predicate;
 
 public class Etudiant {
     private String prenom;
@@ -37,7 +36,7 @@ public class Etudiant {
         return annee;
     }
 
-    public Map<Matiere,Double> notes() {
+    public Map<Matiere, Double> notes() {
         return notes;
     }
 
@@ -62,14 +61,14 @@ public class Etudiant {
     @Override
     public String toString() {
         StringBuilder rtr = new StringBuilder();
-        rtr.append(String.format("%s %s %s\n", numero, prenom, nom));
+        rtr.append(String.format("%s %s %s %n", numero, prenom, nom));
         for (UE ue : annee.ues()) {
-            rtr.append(String.format("%s\n", ue.nom()));
+            rtr.append(String.format("%s %n", ue.nom()));
             for (Entry<Matiere, Integer> ects : ue.ects().entrySet()) {
                 Matiere matiere = ects.getKey();
                 Integer credits = ects.getValue();
                 String note = notes.containsKey(matiere) ? notes.get(matiere).toString() : "DEF";
-                rtr.append(String.format("%s (%d) : %s\n", matiere, credits, note));
+                rtr.append(String.format("%s (%d) : %s %n", matiere, credits, note));
             }
         }
         return rtr.toString();
