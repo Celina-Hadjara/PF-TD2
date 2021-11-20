@@ -1,0 +1,8 @@
+
+e
+java:S1104"OMake fst a static final constant or non-public and provide accessors if needed.(Ûãøç
+e
+java:S1104"OMake snd a static final constant or non-public and provide accessors if needed.(ëæµ¿
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ýùÂ
+d
+java:S2259&"IA "NullPointerException" could be thrown; "lesElements" is nullable here.(Ã›”³ûÿÿÿÿ
